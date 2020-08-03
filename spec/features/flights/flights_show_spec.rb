@@ -38,14 +38,6 @@ RSpec.describe "Flights Show Page" do
 
   it "Count of minors and adults on flight" do
     expect(page).to have_content("Number of Adults: 1")
-    expect(page).to have_content("Number of minors: 3")
+    expect(page).to have_content("Number of Minors: 3")
   end
 end
-
-
-
-
-
-I see the number of minors on the flight (minors are any passengers that are under 18)
-And I see the number of adults on the flight (adults are any passengers that are 18 or older)
-```

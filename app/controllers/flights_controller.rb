@@ -1,5 +1,6 @@
 class FlightsController < ApplicationController
   def show
     @flight = Flight.find(params[:id])
-  end  
+    @passengers = @flight.passengers
+  end
 end
