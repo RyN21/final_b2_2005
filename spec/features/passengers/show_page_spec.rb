@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Flights Show Page" do
+RSpec.describe "Passenger Show Page" do
   before :each do
     @frontier = Airline.create(name: "Frontier")
     @flight_1 = @frontier.flights.create(number: "1727", date: "08/03/20", time: "10:00", departure_city: "Denver", arrival_city: "Reno")
+    @flight_1 = @frontier.flights.create(number: "1827", date: "08/03/20", time: "8:00", departure_city: "Denver", arrival_city: "Reno")
     @joe      = Passenger.create(name: "Joe", age: 7)
     @ron      = Passenger.create(name: "Ron", age: 7)
     @olivia   = Passenger.create(name: "Olivia", age: 7)
@@ -12,27 +13,16 @@ RSpec.describe "Flights Show Page" do
     FlightPassenger.create(flight: @flight_1, passenger: @joe)
     FlightPassenger.create(flight: @flight_1, passenger: @ron)
     FlightPassenger.create(flight: @flight_1, passenger: @olivia)
+    FlightPassenger.create(flight: @flight_2, passenger: @olivia)
     FlightPassenger.create(flight: @flight_1, passenger: @reija)
 
-    visit "/flights/#{@flight_1.id}"
+    visit "/passengers/#{@olivia.id}"
   end
 
-  it "has flight info" do
-    expect(page).to have_content(@flight_1.number)
-    expect(page).to have_content(@flight_1.date)
-    expect(page).to have_content(@flight_1.time)
-    expect(page).to have_content(@flight_1.departure_city)
-    expect(page).to have_content(@flight_1.arrival_city)
-  end
-
-  it "has the name of the airline it belongs to" do
-    expect(page).to have_content("Frontier")
-  end
-
-  it "has the names of all the passengers on the flight" do
-    expect(page).to have_content(@joe.name)
-    expect(page).to have_content(@ron.name)
-    expect(page).to have_content(@olivia.name)
-    expect(page).to have_content(@reija.name)
+  it "has passengers info" do
+    within "#flights" do
+      expect(page).to have_link("1727")
+      expect(page).to have_link("1827")
+    end
   end
 end
