@@ -25,10 +25,10 @@ RSpec.describe "Flights Show Page" do
     expect(page).to have_content(@flight_1.arrival_city)
   end
 
-  # it "has the name of the airline it belongs to" do
-  #   expect(page).to have_content("Frontier")
-  # end
-  #
+  it "has the name of the airline it belongs to" do
+    expect(page).to have_content("Frontier")
+  end
+
   # it "has the names of all the passengers on the flight" do
   #   expect(page).to have_content(@joe.name)
   #   expect(page).to have_content(@ron.name)
