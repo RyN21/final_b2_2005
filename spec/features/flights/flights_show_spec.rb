@@ -5,8 +5,8 @@ RSpec.describe "Flights Show Page" do
     @frontier = Airline.create(name: "Frontier")
     @flight_1 = @frontier.flights.create(number: "1727", date: "08/03/20", time: "10:00", departure_city: "Denver", arrival_city: "Reno")
     @joe      = Passenger.create(name: "Joe", age: 7)
-    @ron      = Passenger.create(name: "Ron", age: 7)
-    @olivia   = Passenger.create(name: "Olivia", age: 7)
+    @ron      = Passenger.create(name: "Ron", age: 5)
+    @olivia   = Passenger.create(name: "Olivia", age: 25)
     @reija    = Passenger.create(name: "Reija", age: 7)
 
     FlightPassenger.create(flight: @flight_1, passenger: @joe)
@@ -35,4 +35,17 @@ RSpec.describe "Flights Show Page" do
     expect(page).to have_content(@olivia.name)
     expect(page).to have_content(@reija.name)
   end
+
+  it "Count of minors and adults on flight" do
+    expect(page).to have_content("Number of Adults: 1")
+    expect(page).to have_content("Number of minors: 3")
+  end
 end
+
+
+
+
+
+I see the number of minors on the flight (minors are any passengers that are under 18)
+And I see the number of adults on the flight (adults are any passengers that are 18 or older)
+```
