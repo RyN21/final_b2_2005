@@ -206,6 +206,8 @@
         "lines": [
           1,
           null,
+          null,
+          1,
           null
         ]
       },
@@ -250,8 +252,16 @@
           null,
           null
         ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/app/models/flight_passengers.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1596469379
+    "timestamp": 1596469690
   }
 }
