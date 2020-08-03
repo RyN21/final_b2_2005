@@ -220,6 +220,61 @@
           null
         ]
       },
+      "/Users/ryn/turing/2module/final/final_b2_2005/spec/features/passengers/show_page_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/spec/models/airline_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/ryn/turing/2module/final/final_b2_2005/app/models/airline.rb": {
         "lines": [
           1,
@@ -315,11 +370,11 @@
           null,
           null,
           1,
-          1,
+          5,
           null,
           null,
           1,
-          1,
+          5,
           null,
           null
         ]
@@ -350,8 +405,50 @@
           1,
           null
         ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/app/controllers/flights_controller.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/app/controllers/passengers_controller.rb": {
+        "lines": [
+          1,
+          1,
+          3,
+          null,
+          null
+        ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/app/controllers/passenger/flights_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1596477289
+    "timestamp": 1596477601
   }
 }
