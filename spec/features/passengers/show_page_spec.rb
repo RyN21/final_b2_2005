@@ -5,6 +5,7 @@ RSpec.describe "Passenger Show Page" do
     @frontier = Airline.create(name: "Frontier")
     @flight_1 = @frontier.flights.create(number: "1727", date: "08/03/20", time: "10:00", departure_city: "Denver", arrival_city: "Reno")
     @flight_2 = @frontier.flights.create(number: "1827", date: "08/03/20", time: "8:00", departure_city: "Denver", arrival_city: "Reno")
+    @flight_3 = @frontier.flights.create(number: "1277", date: "08/03/20", time: "8:00", departure_city: "Denver", arrival_city: "Reno")
     @joe      = Passenger.create(name: "Joe", age: 7)
     @ron      = Passenger.create(name: "Ron", age: 7)
     @olivia   = Passenger.create(name: "Olivia", age: 7)
@@ -17,11 +18,20 @@ RSpec.describe "Passenger Show Page" do
     FlightPassenger.create(flight: @flight_1, passenger: @reija)
 
     visit "/passengers/#{@olivia.id}"
-    save_and_open_page
   end
 
   it "has passengers info" do
     expect(page).to have_link("1727")
     expect(page).to have_link("1827")
+  end
+
+  it "form to add flight" do
+
+    fill_in "number", with: "1277"
+    click_button "Add Flight"
+
+    expect(current_path).to eq("/passengers/#{@olivia.id}")
+
+    expect(page).to have_link("1277")
   end
 end
