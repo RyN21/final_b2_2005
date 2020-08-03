@@ -10,11 +10,11 @@ class Flight < ApplicationRecord
                         :arrival_city
 
 
-  def count_of_minors(passengers)
+  def count_of_minors
     passengers.where('age < 18').count
   end
 
-  def count_of_adults(passengers)
+  def count_of_adults
     passengers.where('age >= 18').count
   end
 end
