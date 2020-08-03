@@ -231,26 +231,6 @@
           null
         ]
       },
-      "/Users/ryn/turing/2module/final/final_b2_2005/spec/models/flight_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/ryn/turing/2module/final/final_b2_2005/app/models/flight.rb": {
         "lines": [
           1,
@@ -263,8 +243,15 @@
           null,
           null
         ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/app/models/passenger.rb": {
+        "lines": [
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1596469147
+    "timestamp": 1596469262
   }
 }
