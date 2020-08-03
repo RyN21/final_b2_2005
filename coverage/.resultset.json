@@ -208,6 +208,8 @@
           null,
           null,
           1,
+          null,
+          1,
           null
         ]
       },
@@ -266,8 +268,24 @@
           1,
           null
         ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/app/controllers/passengers_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1596473869
+    "timestamp": 1596474422
   }
 }
