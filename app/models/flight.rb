@@ -9,17 +9,12 @@ class Flight < ApplicationRecord
                         :departure_city,
                         :arrival_city
 
+
   def count_of_minors(passengers)
-    minors = passengers.find_all do |passenger|
-      passenger.age < 18
-    end
-    minors.count
+    passengers.where('age < 18').count
   end
 
   def count_of_adults(passengers)
-    adults = passengers.find_all do |passenger|
-      passenger.age >= 18
-    end
-    adults.count
+    passengers.where('age >= 18').count
   end
 end
