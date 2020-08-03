@@ -9,10 +9,10 @@ RSpec.describe "Flights Show Page" do
     @olivia   = Passenger.create(name: "Olivia", age: 7)
     @reija    = Passenger.create(name: "Reija", age: 7)
 
-    @fligh_passengers1 = FlightPassengers.create(flight: @flight_1, passenger: @joe)
-    @fligh_passengers2 = FlightPassengers.create(flight: @flight_1, passenger: @ron)
-    @fligh_passengers3 = FlightPassengers.create(flight: @flight_1, passenger: @olivia)
-    @fligh_passengers4 = FlightPassengers.create(flight: @flight_1, passenger: @reija)
+    FlightPassenger.create(flight: @flight_1, passenger: @joe)
+    FlightPassenger.create(flight: @flight_1, passenger: @ron)
+    FlightPassenger.create(flight: @flight_1, passenger: @olivia)
+    FlightPassenger.create(flight: @flight_1, passenger: @reija)
 
     visit "/flights/#{@flight_1.id}"
   end
@@ -29,10 +29,10 @@ RSpec.describe "Flights Show Page" do
     expect(page).to have_content("Frontier")
   end
 
-  # it "has the names of all the passengers on the flight" do
-  #   expect(page).to have_content(@joe.name)
-  #   expect(page).to have_content(@ron.name)
-  #   expect(page).to have_content(@olivia.name)
-  #   expect(page).to have_content(@reija.name)
-  # end
+  it "has the names of all the passengers on the flight" do
+    expect(page).to have_content(@joe.name)
+    expect(page).to have_content(@ron.name)
+    expect(page).to have_content(@olivia.name)
+    expect(page).to have_content(@reija.name)
+  end
 end
