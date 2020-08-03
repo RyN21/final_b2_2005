@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Flights Show Page" do
   before :each do
     @frontier = Airline.create(name: "Frontier")
-    @flight_1 = @frontier.flights.create(number: "1727", date: "08/03/20", departure_city: "Denver", arrival_city: "Reno")
+    @flight_1 = @frontier.flights.create(number: "1727", date: "08/03/20", time: "10:00", departure_city: "Denver", arrival_city: "Reno")
     @joe      = Passenger.create(name: "Joe", age: 7)
     @ron      = Passenger.create(name: "Ron", age: 7)
     @olivia   = Passenger.create(name: "Olivia", age: 7)

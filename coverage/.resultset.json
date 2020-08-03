@@ -228,8 +228,28 @@
           1,
           null
         ]
+      },
+      "/Users/ryn/turing/2module/final/final_b2_2005/spec/models/flight_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1596468314
+    "timestamp": 1596468938
   }
 }
